@@ -4,7 +4,7 @@ from transformers import pipeline, AutoModelForSequenceClassification, BertJapan
 import torch
 
 # 学習済みモデルの読み込み
-model = BertForSequenceClassification.from_pretrained("cl-tohoku/bert-base-japanese-whole-word-masking")
+model = BertForSequenceClassification.from_pretrained("bandainamco-mirai/distilbert-base-japanese")
 tokenizer = BertJapaneseTokenizer.from_pretrained("cl-tohoku/bert-base-japanese-whole-word-masking")
 nlp = pipeline("sentiment-analysis",model=model,tokenizer=tokenizer)
 
